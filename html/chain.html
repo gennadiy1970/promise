@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chain</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54=" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/all.css">
+</head>
+<body>
+    <div class="wrapper">
+        <section>
+        <h2>Цепочка из Promise</h2>
+        <p>Цепочка из Promise ооблегчает написания кода для определенных сочетаний асинхронных событий.
+        </p>
+        <p>Идея состоит в том, что помещать <i>return new Promise()</i> в теле функции. 
+            Вызов такой функции генерирует первый промис. Затем в цепочке <i>.then()</i> помещается имя функции с <i>promise</i>.
+            Метод <i>.then()</i> вызывает функцию по имени и тем самым генерирует следующий <i>promise</i> в цепочке.
+            Последним 
+        </p>
+        <details><pre><code>
+function a () {return new Promise () }            
+function b () {return new Promise () }            
+function c () {return new Promise () }
+
+ b().then(a)
+    .then(a)
+    .then(c)
+    .then(data =&gt; console.log('делеам что-то'))
+        </code></pre></details>
+        <p>В примере ниже продемонстрировано как добиться срабатывния на уникальную последовательность нажатия кнопок.
+            Нажатие BAAC будет выведено на экран. Нажатие других сочетаний будет проигнорировано и будет выводиться только последняя нажатая буква.
+        </p>
+    </section>
+        <div class="wrp">
+                <div class="box">
+                    <button id="id1" data-letter="a">A</button>
+                </div>
+                <div class="box">
+                    <button id="id2" data-letter="b">B</button>
+                </div>
+                <div class="box">
+                    <button id="id3" data-letter="c">C</button>
+                </div>
+            </div>
+            <div class="wrp">
+                <div class="panel"></div>
+            </div>
+            <div class="wrp">
+                <div class="sale-panel"></div>
+            </div>
+    </div>
+   <script src="../js/chain.js"></script>
+</body>
+</html>
