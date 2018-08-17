@@ -1,0 +1,46 @@
+body {
+    background: #555;
+    font-family: sans-serif;
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    min-width: 22.5rem;
+    max-width: 90%;
+    margin: auto;
+    padding: 2rem 1rem 2rem 1.5rem;
+    background: #fff;
+    box-shadow: 2px 2px 2px 2px hsla(0, 0%, 0%, .2);
+    min-height: 96vh;
+}
+
+h2, h3 {
+    text-align: center;
+    text-shadow: 2px 2px 2px hsla(0, 0%, 0%, .2);
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: 1rem;
+}
+a {
+    text-shadow: 1px 1px 3px hsla(0, 0%, 0%, .2);
+    text-decoration: none;
+    color: darkslateblue;
+    text-decoration: transparent wavy underline;
+    transition: all .4s ease-in-out .1s;
+}
+
+a:hover {
+    transition: all .4s ease-in-out .1s;
+    text-decoration: darkslateblue wavy underline;
+}
+
+.red {
+    color: red;
+}
