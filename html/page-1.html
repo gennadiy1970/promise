@@ -69,32 +69,50 @@
         <p>Событие - это добавление функции в очередь на выполнение на основе асинхронного события.
             Как правило - на действие пользователя (click, focus, blur и т.п.)
         </p>
+        <details><pre><code>
+    elem.addEventListener('click', callback)
+    function callback (evt) {consolle.log(evt.target)}
+        </code></pre></details>
         <p>Две сложности связаны с событийным асинхронным программированнием.</p>
         <ol>
-            <li>Сложность построения заданных цепочек событий.</li>
-            <li>Обработчики событий должны быть установлены до возможности реализации событий</li>
+            <li>Сложность обработки заданной цепочки событий (click -&gt; keypress -&gt; ...)</li>
+            <li>Необходимость следить за своевременным добавлением и удаленим обработчиков событий</li>
         </ol>
         <h4>Обратные вызовы</h4>
         <p>Обратный вызов - это использование функции как параметра для другой функции</p>
+        <details><pre><code>
+    setTimeout(callback, 1000);
+    function callback () { 
+        console.log('я могу быть параметром')
+    }
+        </code></pre></details>
         <p>Построение заданных цепочек реализуется относительно просто - 
             вложением в функцию-параметр следующей callback функции. </p>
-        <p>Вложение callback функций может расти, что приводит к сложности отладки и тестирования.
-            Эта проблема носит специальное название - CallBack Hell
+        <p>Вложение callback функций может расти. 
+            Внешне это выглядит как смещение кода прогаммы вправо при каждом 
+            новом callback. 
+            Неприятно, когда такое длинный текст не помещается в окно редактора.
+            Можно callback функции выносить, оставляя лишь вызов.
+            Но тогда придется все равно перемещаться по экрану в поисках очередной функции.
+            
         </p>
-        <p>Сложности возникают при запуске нескольких асинхронных операций и попытке применения результат только одной
-            из операций. Например только той, что получила определенный результат. 
-            Сложность в том, что данные внутри одного из CallBack Hell должны сопоставляться с данными
-            других CallBack Hell. 
-            Это требует внешенего объекта для обмена данными. 
-            Код получается  сильно связанным - изменение объекта требует изменения кода во всех
-            асинхронных цепочках. И наоборот - изменение в одной из цепочек может потребовать
-            переписать объект, а значит и все остальные цепочки.
+        <p>Но основная сложности возникает при необходимости обмена и сравнения данных
+            между независимыми асинхронными функциями.
+            Такая ситуация требует внешенего <b>объекта для обмена данными</b>. 
+            Код получается <i>сильно связанным</i> - изменение чего-то одного (объекта или какой-то функции)
+            потребует переписать все зависимые функции и объект.
+            Все вместе эти негативные факторы называются callback hell (ад из callback-ов).
         </p>
+        <h4>Пример до использования Promise.race([])</h4>
+        <p>Обратите внимание на использование объекта асинхронными функциями</p>
         <details>
-            <pre><code>
-                    <p data-height="265" data-theme-id="0" data-slug-hash="rJLBPM" data-default-tab="css,result" data-user="Gorbulin" data-pen-title="async hell full " class="codepen">See the Pen <a href="https://codepen.io/Gorbulin/pen/rJLBPM/">async hell full </a> by Gennadiy (<a href="https://codepen.io/Gorbulin">@Gorbulin</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-                    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-            </code></pre>
+                <p data-height="265" data-theme-id="0" data-slug-hash="zLgQeV" data-default-tab="css,result" data-user="Gorbulin" data-pen-title="Before promise race" class="codepen">See the Pen <a href="https://codepen.io/Gorbulin/pen/zLgQeV/">Before promise race</a> by Gennadiy (<a href="https://codepen.io/Gorbulin">@Gorbulin</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+        </details>
+        <h4>Пример до использования Promise.all([])</h4>
+        <details>
+                <p data-height="265" data-theme-id="0" data-slug-hash="mjNYxr" data-default-tab="js,result" data-user="Gorbulin" data-pen-title="before promise all" class="codepen">See the Pen <a href="https://codepen.io/Gorbulin/pen/mjNYxr/">before promise all</a> by Gennadiy (<a href="https://codepen.io/Gorbulin">@Gorbulin</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
         </details>
     </div>
    <script src="../js/app.js"></script>

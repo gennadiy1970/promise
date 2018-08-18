@@ -38,6 +38,7 @@ Promise.race(
                     clearInterval(delay);
                     h3.textContent = action;
                     timer.style.display = "none";
+
                     return resolve(`<p>Сожалеем, ${action}`)
                 }
                 if ( i > delayAction || i <  0) {
@@ -46,5 +47,5 @@ Promise.race(
             } , 1000)
     })
     ]
-).then(data => salePanel.innerHTML = data,
-       err => salePanel.innerHTML = err); 
+).then(data =>  salePanel.innerHTML = data,
+       err => salePanel.innerHTML = err)

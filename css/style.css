@@ -44,3 +44,67 @@ a:hover {
 .red {
     color: red;
 }
+.wrp {
+    padding: 1rem;
+    max-width: 90%;
+    min-width: 22.5rem;
+    margin: auto;
+    box-shadow: 2px 2px 2px 2px hsla(0,0%,0%,.2);
+    display: flex;
+    justify-content: space-around;
+  }
+  .box { 
+    max-width: 32%;
+    box-shadow: 2px 2px 2px 2px hsla(0,0%,0%,.2);
+    min-height: 10rem;
+  }
+  
+  button {
+    margin: 1rem;
+    --s: 5rem;
+    width: var(--s);
+    height: var(--s);
+    border-radius: 50%;
+    border: none;
+    background: #88f;
+    color: #fff;
+    font-size: 18px;
+    box-shadow: 2px 2px 2px 2px hsla(0,0%,0%,.2);
+    cursor: pointer;
+  }
+  .panel {
+    min-height: 10rem;
+    font-size: 24px;
+    font-family: sans-serif;
+  }
+  .timer {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #800;
+      box-shadow: 2px 2px 2px 2px hsla(0, 0%, 0%, .2);
+  }
+p,
+li {
+    text-indent: 2rem;
+}
+
+.text {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    box-shadow: 2px 2px 2px 2px hsla(0, 0%, 0%, .2);
+}
+
+.test__select,
+.test__answer {
+    flex-basis: 49%;
+    max-width: 49%;
+    background: #1e1e1e;
+    color: #fff;
+}
+
+.test__select input {
+    width: 3rem;
+    text-align: center;
+}
+

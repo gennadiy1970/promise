@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Основы синтаксиса Promise</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54="
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/all.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h2>Основы синтаксиса Promise</h2>
+        <h4>Предварительный обзор Promise</h4>
+        <ul>
+            <li>
+                <b>Promise</b> - это класс</li>
+            <li>Вызов с помощью
+                <i>new</i> создает
+                <b>объект</b>
+                <i>promise</i>
+            </li>
+            <li>Аргументом при вызове обязана быть
+                <i>функция-исполнитель</i>
+            </li>
+            <li>У
+                <i>класса</i> есть два статических метода
+                <b>.all</b> и
+                <b>.race</b>
+            </li>
+            <li>У
+                <i>объекта</i> есть два метода
+                <b>.then</b> и
+                <b>.catch</b>
+            </li>
+            <li>Особенность объекта promise в том, что он
+                <ul>
+                    <li>ждет получения данных</li>
+                    <li>получает данные один раз и только для чтения</li>
+                </ul>
+            </li>
+        </ul>
+        <h4>Пример получения объекта
+            <b>promise</b> из
+            <i>класса</i>
+        </h4>
+        <details>
+            <pre><code>
+    const objPromise = new Promise (executor);
+    objPromise
+      .then(data =&gt; console.log(data))
+      .catch( err =&gt; consoloe.log(err))        
+        </code></pre>
+            <p>mini-test</p>
+            <div class="test">
+                <div class="test__select">
+                    <ul>
+                        <li>
+                            <label>
+                                <input type="number" name="obj" value="0" data-obj="class"> class</label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="number" name="obj" value="0" data-obj="object"> object</label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="number" name="obj" value="0" data-obj="executor"> функция-исполнитель</label>
+                        </li>
+                        <p>
+                            <button class="test__sbmt" type="submit">Send</button>
+                            <button class="test__reset" type="reset">Reset</button>
+                        </p>
+                    </ul>
+                </div>
+                <div class="test__answer">
+                    <ol>
+                        <li data-obj="object">objPromise</li>
+                        <li data-obj="class">Promise</li>
+                        <li data-obj="executor">executor</li>
+                    </ol>
+                    <p>
+                        <b>Ваш ответ:</b>
+                        <i class="test__right red">ожидается</i>
+                    </p>
+                </div>
+            </div>
+        </details>
+        <p>При создании объекта promise в качестве аргумента выступает некоторая функция - исполнитель. Особенностью executor
+            является наличие 2-х обязательных аргументов которые обязаны быть вызваны в теле функции. Исторически первый
+            параметр называют resolve, а второй reject. Но имена не имеют значения, имеет значение только порядок аргументов.
+            Эти аргументы являются callback функциями. К счастью нам не надо описывать тело этих callback. Нам необходимо
+            вызвать их в теле функции и передать
+            <ul>
+                <li>вычисленное значение для первого аргумента - resolve(data)</li>
+                <li>сообщение о причине отсутствия вычисленного значения - reject(error))</li>
+            </ul>
+        </p>
+        <details>
+            <pre><code>
+      function executor(<b>one</b>, <b>two</b>) { <span class="comment">(resolve, reject)</span>
+         if (true) {
+            return <b>one</b>('All right!') <span class="comment">one === resolve</span>
+        }
+        return <b>two</b>('Error in IF condition!') <span class="comment">two === reject</span>
+      }            
+    </code></pre>
+        </details>
+        <p>Результат выполнения аргумента попадает в метод .then()
+            <i class="red">или</i> .catch().</p>
+        <details>
+            <pre><code>
+    objPromise
+      .then(data =&gt; console.log(data)) <span class="comment">'All right!'</span>
+      .catch( err =&gt; consoloe.log(err))        
+    </code></pre>
+        </details>
+        <p>Оба метода выстраивают цепочку, т.е. результат вычисления обязательно будет получен, каким бы этот результат не был.</p>
+        <p>Метод может повторяться, выстраивая цепочки.</p>
+        <p>А метод .catch() прописан один раз, в конце всей цепочки. Сatch выполнится только если возникнет
+            <i>ошибка</i>
+            внутри аргумента promise (функции - executor)
+            <i class="red">или</i> внутри вычислений метода .then()</p>
+        <details>
+            <pre><code>
+    objPromise
+    .then(<b>data</b> =&gt; console.log(<b>dat</b>)) 
+    .catch( err =&gt; consoloe.log(err)) <span class="comment">Error:</span>
+    <span class="comment">'Promise (rejected: 
+        ReferenceError: consoloe is not defined)'</span>
+            </code></pre>
+        </details>
+        <h4>Executor</h4>
+        <details>
+            <pre><code>
+       function executor (resolve, reject) {
+           if('все хорошо') {
+               return resolve ('данные для Promise')
+           } else {
+               return reject ('описание почему данные не получены')
+           }
+       }
+                </code></pre>
+        </details>
+        <h4>Пример promise</h4>
+        <details>
+            <p data-height="265" data-theme-id="0" data-slug-hash="ZjgLRQ" data-default-tab="js,result" data-user="Gorbulin" data-pen-title="first promise"
+                class="codepen">See the Pen
+                <a href="https://codepen.io/Gorbulin/pen/ZjgLRQ/">first promise</a> by Gennadiy (
+                <a href="https://codepen.io/Gorbulin">@Gorbulin</a>) on
+                <a href="https://codepen.io">CodePen</a>.</p>
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+        </details>
+        <h4>Статический метод Promise.race</h4>
+        <p>Promise.race[prm1, prm2, ...].then(data =&gt; console.log(data), err =&gt; console.log(err)) </p>
+        <p>Выполнится первый resolve или reject промис из массива</p>
+        <p>Пример 1</p>
+        <details>
+            <p data-height="265" data-theme-id="0" data-slug-hash="PQzNja" data-default-tab="css,result" data-user="Gorbulin" data-pen-title=" promise race"
+                class="codepen">See the Pen
+                <a href="https://codepen.io/Gorbulin/pen/PQzNja/"> promise race</a> by Gennadiy (
+                <a href="https://codepen.io/Gorbulin">@Gorbulin</a>) on
+                <a href="https://codepen.io">CodePen</a>.</p>
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+        </details>
+
+        <p>Пример 2</p>
+        <details>
+            <p data-height="265" data-theme-id="0" data-slug-hash="ZjgeYL" data-default-tab="js,result" data-user="Gorbulin" data-pen-title="rase promise"
+                class="codepen">See the Pen
+                <a href="https://codepen.io/Gorbulin/pen/ZjgeYL/">rase promise</a> by Gennadiy (
+                <a href="https://codepen.io/Gorbulin">@Gorbulin</a>) on
+                <a href="https://codepen.io">CodePen</a>.</p>
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+        </details>
+        <h4>Статический метод Promise.all</h4>
+        <p>Promise.all[prm1, prm2, ...].then(data =&gt; console.log(data)) </p>
+        <p>Выполнение произойдет только при resolve всх элементов массива промисов</p>
+        <p>Пример 1</p>
+        <details>
+            <p data-height="265" data-theme-id="0" data-slug-hash="rJLeeB" data-default-tab="css,result" data-user="Gorbulin" data-pen-title=" promise all"
+                class="codepen">See the Pen
+                <a href="https://codepen.io/Gorbulin/pen/rJLeeB/"> promise all</a> by Gennadiy (
+                <a href="https://codepen.io/Gorbulin">@Gorbulin</a>) on
+                <a href="https://codepen.io">CodePen</a>.</p>
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+        </details>
+        <p>Пример 2</p>
+        <details>
+            <p data-height="265" data-theme-id="0" data-slug-hash="VBopVO" data-default-tab="js,result" data-user="Gorbulin" data-pen-title="all promise"
+                class="codepen">See the Pen
+                <a href="https://codepen.io/Gorbulin/pen/VBopVO/">all promise</a> by Gennadiy (
+                <a href="https://codepen.io/Gorbulin">@Gorbulin</a>) on
+                <a href="https://codepen.io">CodePen</a>.</p>
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+        </details>
+    </div>
+    <script src="../js/promise.js"></script>
+</body>
+
+</html>
