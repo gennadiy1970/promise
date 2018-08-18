@@ -28,7 +28,7 @@ Promise.all(
       });
     });
   })
-).then(data => {
+).then(data => { // TODO проверка и подбор окончания для ${buttons.length}-х 
         salePanel.innerHTML =  `<p>Вы получаете скидку за покупку ${buttons.length}-х товаров: ${data}</p>`;
     }
 );
