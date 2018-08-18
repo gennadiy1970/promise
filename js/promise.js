@@ -12,8 +12,12 @@ function resetAnswers () {
     rightText.textContent = "ожидается"    
 }
 function checkAnswers () {
-    
     rightText.textContent = Array.from(inputs).filter(el => {
-        return el.dataset.obj === answers[+el.value - 1].dataset.obj
+        let index = +el.value - 1;
+        if (index >= 0 && index < inputs.length) {
+            return el.dataset.obj === answers[index].dataset.obj
+        } 
+        return false;
+
     }).length === inputs.length;
 }
