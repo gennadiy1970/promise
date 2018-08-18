@@ -14,8 +14,9 @@ function showGoods(evt) {
   panel.innerHTML = evt.target.dataset.goods;
 }
 
-Promise.race(
-    [ new Promise(function(resolve, reject) {
+Promise.race( 
+    [ 
+        new Promise(function(resolve, reject) {
         button.addEventListener('click', function(evt) {
             if (evt.target.dataset.goods) {
               return resolve(
@@ -26,6 +27,7 @@ Promise.race(
             return reject(new Error("Товар отсутствует")); 
         })
       }),
+
       new Promise(function(resolve, reject) {
           let action = 'Акция закончилась';
           let delayAction = 5;
@@ -45,7 +47,8 @@ Promise.race(
                     return reject("Ошибка диапазона времени акции")
                 }
             } , 1000)
-    })
+      })
     ]
 ).then(data =>  salePanel.innerHTML = data,
        err => salePanel.innerHTML = err)
+

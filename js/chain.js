@@ -44,4 +44,4 @@ function a () {
     .then(d => salePanel.textContent = 'Вы набрали BAAC')
     .catch(err =>  salePanel.textContent = 'Error')
   
-  
+ 

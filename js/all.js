@@ -12,14 +12,16 @@ function showGoods(evt) {
   panel.innerHTML = evt.target.dataset.goods;
 }
 
+/* функция не завист от количества товаров. 
+  Она завист от селектора buttons 
+  */
 Promise.all(
-  // map
+  // map вернет массив
   Array.from(buttons).map(el => {
     // return array of new Promises 
     return new Promise(function(resolve, reject) {
       el.addEventListener("click", function(evt) {
         if (evt.target.dataset.goods) {
-            console.log(evt.target.dataset.goods)
           return resolve(evt.target.dataset.goods);
         }
         return reject(new Error("Товар отсутствует"));
@@ -27,8 +29,8 @@ Promise.all(
     });
   })
 ).then(data => {
-        console.log('3 = ' + data);
-        salePanel.innerHTML =  `<p>Вы получаете скидку за покупку трех товаров: ${data}</p>`;
+        salePanel.innerHTML =  `<p>Вы получаете скидку за покупку ${buttons.length}-х товаров: ${data}</p>`;
     }
 );
+
 
