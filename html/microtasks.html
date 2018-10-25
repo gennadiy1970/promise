@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Microtasks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54="
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <section>
+            <h2>Stack &amp; Event Loop (tasks, microtasks)</h2>
+            <p>JS выполняет одно задание в единицу времени.</p>
+            <p>Последовательность заданий формируется в стеке.</p>
+            <p>Цикл событий (Event Loop) - параллельные стеку процессы (в браузере или NodeJS), управляет формированием
+                очереди для вставки в стек асинхронных заданий.</p>
+            <div>
+                <p>Цикл событий (Event Loop) имеет три отдельных очереди. </p>
+                <h4>Queues:</h4>
+                <ul>
+                    <li><b>tasks:</b> события DOM, setTimeout, setInterval и др/</li>
+                    <li><b>microtasks</b> promise и MutationObserver (аналог события)</li>
+                    <li><b>render</b> расчет стилей, применение стилий, расчет layout, попиксельній расчет и отрисовка</li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <div class="img-wrp">
+                <img src="../img/microtasks.svg" alt="microtasks">
+            </div>
+            <div class="img-wrp">
+                <img src="../img/microtasks_2.svg" alt="microtasks 2">
+            </div>
+        </section>
+    </div>
+    <div class="wrapper">
+        <section>
+            <h4>Microtasks</h4>
+            <ul>
+                <li>Выполняются сразу после <b>tasks</b></li>
+                <li>В отличие от <b>tasks</b> имеют максимальный приоритет и загружаются в стек до тех пор, пока
+                    очередь microtasks не опустошится. Если при добавлении microtasks в очередь будут поступать
+                    следующие задачи до опустошения очереди, то это заблокирует другие очереди и rendring в том числе.
+                </li>
+            </ul>
+        </section>
+        <section>
+            <details open>
+                <summary>Пример последовательности выполнения заданий из очереди tasks и microtasrs</summary>
+                <pre> <code>
+console.log('старт программы');
+
+setTimeout(function() {
+  console.log('setTimeout 0');
+}, 0);
+
+Promise.resolve().then(function() {
+  console.log('promise');
+}).then(function() {
+  console.log('следующий promise');
+});
+
+console.log('выход из потока');
+console.log('выход из программы');
+        </code></pre>
+            </details>
+        </section>
+    </div>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>

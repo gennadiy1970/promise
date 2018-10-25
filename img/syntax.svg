@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="297mm"
+   height="210mm"
+   viewBox="0 0 297 210"
+   version="1.1"
+   id="svg4701"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="syntax.svg">
+  <defs
+     id="defs4695">
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible;"
+       id="marker5748"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend">
+      <path
+         transform="scale(1.1) rotate(180) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#800080;stroke-opacity:1;fill:#800080;fill-opacity:1"
+         id="path5746" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker5720"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="DotL">
+      <path
+         transform="scale(0.8) translate(7.4, 1)"
+         style="fill-rule:evenodd;stroke:#800080;stroke-width:1pt;stroke-opacity:1;fill:#800080;fill-opacity:1"
+         d="M -2.5,-1.0 C -2.5,1.7600000 -4.7400000,4.0 -7.5,4.0 C -10.260000,4.0 -12.5,1.7600000 -12.5,-1.0 C -12.5,-3.7600000 -10.260000,-6.0 -7.5,-6.0 C -4.7400000,-6.0 -2.5,-3.7600000 -2.5,-1.0 z "
+         id="path5718" />
+    </marker>
+    <marker
+       inkscape:stockid="DotL"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="DotL"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path5309"
+         d="M -2.5,-1.0 C -2.5,1.7600000 -4.7400000,4.0 -7.5,4.0 C -10.260000,4.0 -12.5,1.7600000 -12.5,-1.0 C -12.5,-3.7600000 -10.260000,-6.0 -7.5,-6.0 C -4.7400000,-6.0 -2.5,-3.7600000 -2.5,-1.0 z "
+         style="fill-rule:evenodd;stroke:#800080;stroke-width:1pt;stroke-opacity:1;fill:#800080;fill-opacity:1"
+         transform="scale(0.8) translate(7.4, 1)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Lend"
+       style="overflow:visible;"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path5269"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#800080;stroke-opacity:1;fill:#800080;fill-opacity:1"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(1.1) rotate(180) translate(1,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="574.28609"
+     inkscape:cy="183.45874"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4698">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-87)">
+    <path
+       style="fill:#800080;fill-opacity:1;stroke:#800080;stroke-width:0.26499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#DotL);marker-end:url(#Arrow2Lend)"
+       d="M 70.390497,135.22677 H 257.61441"
+       id="path5246"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:9.8777771px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="57.294556"
+       y="119.41344"
+       id="text4595"><tspan
+         sodipodi:role="line"
+         id="tspan4593"
+         x="57.294556"
+         y="119.41344"
+         style="font-size:7.76111126px;fill:#666666;stroke-width:0.26458332">flow end</tspan></text>
+    <text
+       id="text5582"
+       y="146.09846"
+       x="249.23085"
+       style="font-style:normal;font-weight:normal;font-size:9.8777771px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       xml:space="preserve"><tspan
+         style="font-size:7.76111126px;fill:#666666;stroke-width:0.26458332"
+         y="146.09846"
+         x="249.23085"
+         id="tspan5580"
+         sodipodi:role="line">time</tspan></text>
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path5716"
+       d="M 25.623222,135.22486 H 67.938303"
+       style="fill:#800080;fill-opacity:1;stroke:#800080;stroke-width:0.26499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker5720);marker-end:url(#marker5748)" />
+    <text
+       id="text6766"
+       y="119.03545"
+       x="6.192163"
+       style="font-style:normal;font-weight:normal;font-size:9.8777771px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       xml:space="preserve"><tspan
+         style="font-size:7.76111126px;fill:#666666;stroke-width:0.26458332"
+         y="119.03545"
+         x="6.192163"
+         id="tspan6764"
+         sodipodi:role="line">start flow</tspan></text>
+    <text
+       id="text6998"
+       y="96.545883"
+       x="143.39755"
+       style="font-style:normal;font-weight:normal;font-size:9.8777771px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       xml:space="preserve"><tspan
+         style="font-size:7.76111126px;fill:#666666;stroke-width:0.26458332"
+         y="96.545883"
+         x="143.39755"
+         id="tspan6996"
+         sodipodi:role="line">Exec( async callbac (ok, error))</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:6.54498863px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="158.06198"
+       y="101.81668"
+       id="text7006"
+       transform="scale(0.96678456,1.0343566)"><tspan
+         sodipodi:role="line"
+         id="tspan7004"
+         x="158.06198"
+         y="101.81668"
+         style="font-size:5.14249182px;fill:#666666;stroke-width:0.26458332">wait return number </tspan><tspan
+         sodipodi:role="line"
+         x="158.06198"
+         y="109.99792"
+         style="font-size:5.14249182px;fill:#666666;stroke-width:0.26458332"
+         id="tspan7090">callback (data) =&gt;  data *= 10</tspan><tspan
+         sodipodi:role="line"
+         x="158.06198"
+         y="118.17915"
+         style="font-size:5.14249182px;fill:#666666;stroke-width:0.26458332"
+         id="tspan7842">callback (data) =&gt; data.toFixed(0)  </tspan><tspan
+         sodipodi:role="line"
+         x="158.06198"
+         y="126.36039"
+         style="font-size:5.14249182px;fill:#666666;stroke-width:0.26458332"
+         id="tspan7088">But maybe NaN or Error</tspan></text>
+    <circle
+       style="opacity:0.27700004;fill:#800080;fill-opacity:1;stroke:#800080;stroke-width:0.26499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path7008"
+       cx="164.04167"
+       cy="135.45288"
+       r="2.2678571" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:9.8777771px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;opacity:0.27000002;fill:#800080;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="146.80612"
+       y="149.28677"
+       id="text7012"><tspan
+         sodipodi:role="line"
+         id="tspan7010"
+         x="146.80612"
+         y="149.28677"
+         style="fill:#800080;stroke-width:0.26458332">when?!</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:9.8777771px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="5.0848927"
+       y="158.52556"
+       id="text7020"><tspan
+         sodipodi:role="line"
+         id="tspan7018"
+         x="5.0848927"
+         y="158.52556"
+         style="font-size:7.76111126px;fill:#666666;stroke-width:0.26458332">setTimeout( () =&gt; {</tspan><tspan
+         sodipodi:role="line"
+         x="5.0848927"
+         y="170.87277"
+         style="font-size:7.76111126px;fill:#666666;stroke-width:0.26458332"
+         id="tspan7022"> const result = Math.random()</tspan><tspan
+         sodipodi:role="line"
+         x="5.0848927"
+         y="183.22"
+         style="font-size:7.76111126px;fill:#666666;stroke-width:0.26458332"
+         id="tspan7844">  return  result &gt; .5</tspan><tspan
+         sodipodi:role="line"
+         x="5.0848927"
+         y="195.56723"
+         style="font-size:7.76111126px;fill:#666666;stroke-width:0.26458332"
+         id="tspan7050">     ? result</tspan><tspan
+         sodipodi:role="line"
+         x="5.0848927"
+         y="207.91444"
+         style="font-size:7.76111126px;fill:#666666;stroke-width:0.26458332"
+         id="tspan7064">     : 'result &lt;= .5'</tspan><tspan
+         sodipodi:role="line"
+         x="5.0848927"
+         y="220.26166"
+         style="font-size:7.76111126px;fill:#666666;stroke-width:0.26458332"
+         id="tspan7024">}, Math.random() * 1000)</tspan></text>
+    <text
+       id="text7138"
+       y="257.25394"
+       x="5.2192063"
+       style="font-style:normal;font-weight:normal;font-size:9.8777771px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       xml:space="preserve"><tspan
+         id="tspan7136"
+         style="font-size:7.76111126px;fill:#666666;stroke-width:0.26458332"
+         y="257.25394"
+         x="5.2192063"
+         sodipodi:role="line">function callback (data)  {</tspan><tspan
+         style="font-size:7.76111126px;fill:#666666;stroke-width:0.26458332"
+         y="269.60117"
+         x="5.2192063"
+         sodipodi:role="line"
+         id="tspan7158">    retutrn data * 10;</tspan><tspan
+         style="font-size:7.76111126px;fill:#666666;stroke-width:0.26458332"
+         y="281.94836"
+         x="5.2192063"
+         sodipodi:role="line"
+         id="tspan7162">}</tspan></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot7140"
+       style="fill:black;fill-opacity:1;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:37.33333333px;line-height:1.25;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion7142"><rect
+           id="rect7144"
+           width="208.09143"
+           height="82.832512"
+           x="202.0305"
+           y="644.19824" /></flowRegion><flowPara
+         id="flowPara7146" /></flowRoot>    <ellipse
+       style="opacity:0.27000002;fill:#800080;fill-opacity:1;stroke:#800080;stroke-width:0.26499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path7168"
+       cx="253.48987"
+       cy="177.51439"
+       rx="22.985178"
+       ry="9.3544331" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:9.8777771px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="235.33168"
+       y="180.50278"
+       id="text7172"><tspan
+         sodipodi:role="line"
+         id="tspan7170"
+         x="235.33168"
+         y="180.50278"
+         style="stroke-width:0.26458332">promise</tspan></text>
+    <ellipse
+       ry="9.3544331"
+       rx="22.985178"
+       cy="232.99545"
+       cx="161.43079"
+       id="ellipse7174"
+       style="opacity:0.27000002;fill:#800080;fill-opacity:1;stroke:#800080;stroke-width:0.26499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <text
+       id="text7178"
+       y="235.98384"
+       x="143.2726"
+       style="font-style:normal;font-weight:normal;font-size:9.8777771px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       xml:space="preserve"><tspan
+         style="stroke-width:0.26458332"
+         y="235.98384"
+         x="143.2726"
+         id="tspan7176"
+         sodipodi:role="line">promise</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:9.8777771px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="140.58377"
+       y="254.20999"
+       id="text7182"><tspan
+         sodipodi:role="line"
+         id="tspan7180"
+         x="140.58377"
+         y="254.20999"
+         style="stroke-width:0.26458332">.then(data =&gt; data *= 10)</tspan><tspan
+         sodipodi:role="line"
+         x="140.58377"
+         y="266.55719"
+         style="stroke-width:0.26458332"
+         id="tspan7846">.then(data =&gt; data.toFixed(0)</tspan><tspan
+         sodipodi:role="line"
+         x="140.58377"
+         y="278.90442"
+         style="stroke-width:0.26458332"
+         id="tspan7848">.then(data = &gt; log(data))</tspan><tspan
+         sodipodi:role="line"
+         x="140.58377"
+         y="291.25165"
+         style="stroke-width:0.26458332"
+         id="tspan7184">.catch(err =&gt; log(err))</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:9.8777771px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="133.1002"
+       y="181.50192"
+       id="text7188"><tspan
+         sodipodi:role="line"
+         x="133.1002"
+         y="181.50192"
+         style="stroke-width:0.26458332"
+         id="tspan7194">Создаем промис</tspan></text>
+    <text
+       id="text7840"
+       y="217.18694"
+       x="133.63475"
+       style="font-style:normal;font-weight:normal;font-size:9.8777771px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       xml:space="preserve"><tspan
+         id="tspan7838"
+         style="stroke-width:0.26458332"
+         y="217.18694"
+         x="133.63475"
+         sodipodi:role="line">Используем промис</tspan></text>
+  </g>
+</svg>

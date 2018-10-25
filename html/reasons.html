@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reasons</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54="
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <section>
+            <h1>Зачем нужны Promises</h1>
+            <h2>Cложности асинхронного программированнием.</h2>
+            <ol>
+                <li>Сложность обработки заданной цепочки событий (click -&gt; keypress -&gt; ...)</li>
+                <li>Необходимость следить за своевременным добавлением и удаленим обработчиков событий</li>
+                <li>Callback Hell:</li>
+                <ul>
+                    <li>Необходимость во вложенных callback-функциях - трудность чтения и понимания кода.</li>
+                    <li>Объект - посредник для обмена данными callback-функций создает сильно связанный код.</li>
+                    <li>Проблема поиска ошибок внутри вложенностей т.к. ошибки всплывают.</li>
+                </ul>
+            </ol>
+        </section>
+        <section>
+            <div class="img-wrp">
+                <img src="../img/asyncHell.png" alt="async Hell">
+            </div>
+        </section>
+        <section>
+            <h4>Пример, который можно заменить на Promise.race([])</h4>
+            <p>Обратите внимание на использование объекта асинхронными функциями</p>
+            <details >
+                <p data-height="265" data-theme-id="0" data-slug-hash="zLgQeV" data-default-tab="css,result" data-user="Gorbulin"
+                    data-pen-title="Before promise race" class="codepen">See the Pen <a href="https://codepen.io/Gorbulin/pen/zLgQeV/">Before
+                        promise race</a> by Gennadiy (<a href="https://codepen.io/Gorbulin">@Gorbulin</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </details>
+        </section>
+        <section>
+            <h4>Пример, который можно заменить на Promise.all([])</h4>
+            <details >
+                <p data-height="265" data-theme-id="0" data-slug-hash="mjNYxr" data-default-tab="js,result" data-user="Gorbulin"
+                    data-pen-title="before promise all" class="codepen">See the Pen <a href="https://codepen.io/Gorbulin/pen/mjNYxr/">before
+                        promise all</a> by Gennadiy (<a href="https://codepen.io/Gorbulin">@Gorbulin</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </details>
+        </section>
+    </div>
+    <div class="wrapper">
+        <h3>Пример того как promise обрабатывает callback и ошибки</h3>
+        <div style="padding: 1rem; box-shadow: 2px 2px 2px 2px hsla(0, 0%, 0%, .2);">
+            <img src="../img/syntax.svg" alt="use promise">
+        </div>
+    </div>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>
